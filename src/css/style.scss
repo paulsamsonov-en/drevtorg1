@@ -7,7 +7,7 @@
             }
             
             @font-face {
-                font-family: 'Gotham Pro';
+                font-family: 'Gotham Pro bold';
                 src: url('GothamPro-BoldItalic.eot');
                 src: local('fonts/Gotham Pro Bold Italic'), local('GothamPro-BoldItalic'), url('../fonts/GothamPro-BoldItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/GothamPro-BoldItalic.woff') format('woff'), url('../fonts/GothamPro-BoldItalic.ttf') format('truetype');
                 font-weight: bold;
@@ -30,7 +30,31 @@
                 font-style: normal;
             }
             
-            @import "normalize.css";
+            //--Mixine--//
+            @mixin gothamReg {
+                font-family: 'Gotham Pro', sans-serif;
+            }
+            
+            @mixin gotham {
+                font-family: 'Gotham Pro Narrow', sans-serif;
+            }
+            
+            @mixin gothamBold {
+                font-family: 'Gotham Pro bold', sans-serif;
+            }
+            
+            @mixin intro {
+                font-family: 'Intro', sans-serif;
+                font-size: large;
+            }
+            
+            //--Mixine--//
+            //===Variables====/
+            //===Variables====/
+            body {
+                @include gotham;
+            }
+            
             .main_wrapper {
                 max-width: 1452px;
                 margin: 0px auto;
