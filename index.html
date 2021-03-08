@@ -8,91 +8,236 @@
     <title>Добродрев</title>
     <link rel="stylesheet" href="src/css/style.css">
     <link rel="stylesheet" href="src/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="src/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="src/slick/slick-theme.css" />
+    <script src="https://kit.fontawesome.com/540b40f7e5.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
 </head>
 
 <body>
     <!-- HEADER -->
-    <section class="out-wrapper">
+    <section class="out-wrapper section-header">
         <div class="main_wrapper">
             <header class="header">
-                <div class="header_menu">
-                    <div class="header_menu_info_wrap">
-                        <ul class="header_menu_info">
-                            <li class="header_menu_info-item">О нас</li>
-                            <li class="header_menu_info-item active">Каталог</li>
-                            <li class="header_menu_info-item">Услуги</li>
-                            <li class="header_menu_info-item">Вопрос-ответ</li>
-                        </ul>
+
+                <nav class="nav">
+                    <ul class="nav-menu__info">
+                        <li class="nav-menu__info-item">
+                            <a class="nav-menu__info-item-link" href="#">О нас</a></li>
+                        <li class="nav-menu__info-item">
+                            <a class="nav-menu__info-item-link--active" href="#">Каталог</a></li>
+                        <li class="nav-menu__info-item">
+                            <a class="nav-menu__info-item-link" href="#">Услуги</a></li>
+                        <li class="nav-menu__info-item">
+                            <a class="nav-menu__info-item-link" href="#">Вопрос-ответ</a></li>
+                    </ul>
+                </nav>
+                <div class="header_logo">
+                    <div class="header_logo_img">
+                        <a href="#"> <img src="src/img/logo_drev.png" alt="logo"></a>
                     </div>
-                    <div class="header_logo">
-                        <img src="src/img/logo_drev.png" alt="logo">
-                        <h2 class="header_logo_subtitle">Добродрев</h2>
-                    </div>
-                    <div class="header_menu_news_wrap">
-                        <ul class="header_menu_news">
-                            <li class="header_menu_news_item">Новости</li>
-                            <li class="header_menu_news_item active">Мебель по помещениям</li>
-                            <li class="header_menu_news_item">Доставка</li>
-                            <li class="header_menu_news_item">контакты</li>
-                        </ul>
-                        <div class="header_icon">
-                            <img src="" alt="">
-                            <img src="" alt="">
-                        </div>
+                    <div class="header_logo_title">
+
+                        <a class="header_logo_title_link" href="#">Добродрев </a>
+
                     </div>
 
                 </div>
-        </div>
+                <nav class="nav">
+                    <ul class="nav-menu__info">
+                        <li class="nav-menu__info-item">
+                            <a class="nav-menu__info-item-link" href="#">Новости</a></li>
+                        <li class="nav-menu__info-item ">
+                            <a class="nav-menu__info-item-link--active" href="#">Мебель по помещениям</a></li>
+                        <li class="nav-menu__info-item">
+                            <a class="nav-menu__info-item-link" href="#">Доставка</a></li>
+                        <li class="nav-menu__info-item">
+                            <a class="nav-menu__info-item-link" href="#">Kонтакты</a></li>
+                    </ul>
+                </nav>
+                <div class="header_wrap">
+                    <div class="header_search">
+                        <input class="header_search_form" type="text" placeholder="Введите данные">
+                        <a href="#" class="header_search_btn_search"><i class="fas fa-search"></i></a>
 
+                    </div>
+                </div>
+        </div>
         </header>
         </div>
     </section>
     <!-- HEADER -->
 
     <!-- Banner -->
-    <section class="out-wrapper">
+    <section class="out-wrapper section-banner">
         <div class="main_wrapper">
-            Banner
+            <div class="banner">
+                <div class="banner__subtitle">мебель из натурального дерева</div>
+                <div class="banner__title">
+                    <h1>Добродрев</h1>
+                </div>
+                <div class="banner__btn">Подробнее</div>
+            </div>
+
         </div>
     </section>
     <!--/ Banner -->
 
     <!-- About us -->
-    <section class="out-wrapper">
-        <div class="main_wrapper">
-            About
+    <section class="out-wrapper section-about_us">
+        <div class="about__wrap">
+            <div class="about__wrap_text">
+                <h2 class="about__wrap__text_title">О НАС</h2>
+                <article class="about__wrap__text_inner">
+                    Мы — компания с многолетним опытом, которая в течение почти десятка лет занимается производством пиломатериалов и изделий из них. О дереве мы знаем все! И готовы делиться своим опытом с вами. Наши консультанты всегда окажут квалифицированную помощь при
+                    выборе товаров с учетом индивидуальных требований Заказчика.
+                </article>
+                <article class="about__wrap__text_inner">
+                    <p>Покупая продукцию у “Добродрев” вы одновременно приобретаете уверенность в высоком качестве, безопасности и долговечности изделий. При производстве используется только лучшая древесина из экологически чистых районов Беларуси.</p>
+                </article>
+                <article class="about__wrap__text_inner">
+                    <p>Процесс изготовления производится с применением высокотехнологичного оборудования, которое позволяет получать пиломатериал, соответствующий всем существующим европейским стандартам. А благодаря неоднократной обработке профильных лицевых
+                        изделий, они приобретают отменный внешний вид, способный удивить даже самого требовательного клиента.</p>
+                </article>
+                <a class="about__wrap__text_link" href="#">перейти в галерею ></a>
+            </div>
+
         </div>
+        <div class="about__wrap__image"><img class="about__wrap__image_item" src="src/img/interer_1.png" alt="интерьер"></div>
+
     </section>
     <!-- /About us -->
 
     <!-- Bestseller-->
-    <section class="out-wrapper">
+    <section class="out-wrapper section-bestseller">
         <div class="main_wrapper">
-            Bestseller
-        </div>
-    </section>
-    <!-- Bestseller -->
+            <div class="bestsaller_wrap">
+                <h3 class="bestsaller_title">БЕСТСЕЛЛЕРЫ</h3>
+                <div class="center_slider bestsaller_block_slider">
+                    <div class="bestsaller_block">
+                        <img class="bestsaller_block_image" src="src/img/dosk/doscka_1.png" alt="doska">
+                        <div class="bestsaller_block_item">
+                            <div class="bestsaller_block_item_text">
+                                <div class="bestsaller_block_item_text_title"> Вагонка (сосна, ель)</div>
+                                <div class="bestsaller_block_item_text_subtitle">14 X 88 см</div>
+                            </div>
+                            <div class="bestsaller_block_item_subtitle-btn">В корзину</div>
+                        </div>
+                    </div>
+                    <div class="bestsaller_block">
+                        <img class="bestsaller_block_image" src="src/img/dosk/doscka_2.png" alt="doska">
+                        <div class="bestsaller_block_item">
+                            <div class="bestsaller_block_item_text">
+                                <div class="bestsaller_block_item_text_title"> Брус строганный (техническая сушка)</div>
+                                <div class="bestsaller_block_item_text_subtitle">20 X 40 см</div>
+                            </div>
+                            <div class="bestsaller_block_item_subtitle-btn">В корзину</div>
+                        </div>
+                    </div>
+                    <div class="bestsaller_block">
+                        <img class="bestsaller_block_image" src="src/img/dosk/doscka_3.png" alt="doska">
+                        <div class="bestsaller_block_item">
+                            <div class="bestsaller_block_item_text">
+                                <div class="bestsaller_block_item_text_title"> Стропила (сосна, ель)</div>
+                                <div class="bestsaller_block_item_text_subtitle">150 X 50 см</div>
+                            </div>
+                            <div class="bestsaller_block_item_subtitle-btn">В корзину</div>
+                        </div>
+                    </div>
+                    <div class="bestsaller_block">
+                        <img class="bestsaller_block_image" src="src/img/dosk/doscka_1.png" alt="doska">
+                        <div class="bestsaller_block_item">
+                            <div class="bestsaller_block_item_text">
+                                <div class="bestsaller_block_item_text_title"> Вагонка (сосна, ель)</div>
+                                <div class="bestsaller_block_item_text_subtitle">14 X 88 мм</div>
+                            </div>
+                            <div class="bestsaller_block_item_subtitle-btn">В корзину</div>
+                        </div>
+                    </div>
+                    <div class="bestsaller_block">
+                        <img class="bestsaller_block_image" src="src/img/dosk/doscka_2.png" alt="doska">
+                        <div class="bestsaller_block_item">
+                            <div class="bestsaller_block_item_text">
+                                <div class="bestsaller_block_item_text_title"> Брус строганный (техническая сушка)</div>
+                                <div class="bestsaller_block_item_text_subtitle">14 X 88 мм</div>
+                            </div>
+                            <div class="bestsaller_block_item_subtitle-btn">В корзину</div>
+                        </div>
+                    </div>
+                    <div class="bestsaller_block">
+                        <img class="bestsaller_block_image" src="src/img/dosk/doscka_3.png" alt="doska">
+                        <div class="bestsaller_block_item">
+                            <div class="bestsaller_block_item_text">
+                                <div class="bestsaller_block_item_text_title"> Стропила (сосна, ель)</div>
+                                <div class="bestsaller_block_item_text_subtitle">14 X 88 мм</div>
+                            </div>
+                            <div class="bestsaller_block_item_subtitle-btn">В корзину</div>
+                        </div>
+                    </div>
 
-    <!-- Zabota-->
-    <section class="out-wrapper">
-        <div class="main_wrapper">
-            Zabota
+                </div>
+
+            </div>
+            <div class="bestsaller_link"> <a href="#">Перейти в каталог ></a></div>
         </div>
     </section>
+
+
+    <section class="out-wrapper section-about_us">
+        <div class="about__wrap__image"><img class="about__wrap__image_item" src="src/img/interer_2.png" alt="#"></div>
+        <div class="about__wrap">
+            <div class="about__wrap_text">
+                <h2 class="about__wrap__text_title">ЗАБОТИМСЯ О ВАС</h2>
+                <article class="about__wrap__text_inner">
+                    Мы используем только проверенные и нетоксичные расходные материалы и смолы, контролируем производство.
+                </article>
+                <article class="about__wrap__text_inner">
+                    Мебель, произведенная нашей компанией отличается надежностью, длительным сроком эксплуатации и изящным внешним видом. Теперь желающим заметно преобразить свое жилище не придется платить баснословные суммы за изделия от зарекомендовавших себя мировых брендов,
+                    ведь мы сделали премиальную мебель доступной.
+                </article>
+                <article class="about__wrap__text_inner">
+                    Благодаря сдержанной роскоши дизайнерского стиля выпускаемая мебель прекрасно вписываются в различные типы интерьеров. Элитные диваны, стулья и кресла дополнят слегка вычурный, но, в то же время, элегантный шебби-шик, станут акцентом при исполнении современных
+                    интерьерных решений, подчеркнут роскошь жилища в стиле ампир, придадут эксклюзивности романтичному французскому «Провансу».
+                </article>
+                <a class="about__wrap__text_link" href="#">Подробнее</a>
+            </div>
+
+        </div>
+
+
+    </section>
+
+
     <!--\ Zabota -->
 
 
     <!-- bonus-->
-    <section class="out-wrapper">
+    <section class="out-wrapper section-bonus">
         <div class="main_wrapper">
-            bonus
+            <h3 class="bestsaller_title">НАШИ ПРЕИМУЩЕСТВА</h3>
+            <div class="bonus_wrap">
+                <div class="bonus_item">
+                    <div class="bonus_item_logo"> <img src="" alt=""></div>
+                    <div class="bonus_item_title">Расширенная гарантия на всю продукцию</div>
+                </div>
+                <div class="bonus_item">
+                    <div class="bonus_item_logo"> <img src="" alt=""></div>
+                    <div class="bonus_item_title">Эксклюзивность и индивидуальный подход к каждому клиенту</div>
+                </div>
+                <div class="bonus_item">
+                    <div class="bonus_item_logo"> <img src="" alt=""></div>
+                    <div class="bonus_item_title">Доступность мебели и высокое качество сервиса</div>
+                </div>
+
+            </div>
         </div>
     </section>
     <!--\ bonus -->
 
 
     <!-- gallery-->
-    <section class="out-wrapper">
+    <section class="out-wrapper section-gallery">
         <div class="main_wrapper">
             gallery
         </div>
@@ -101,12 +246,53 @@
 
 
     <!-- footer-->
-    <section class="out-wrapper">
+    <section class="out-wrapper section-footer">
         <div class="main_wrapper">
-            footer
+            <div class="footer_wrap">
+                <div class="footer_koord">
+
+                    <div class="footer_koord_adress">
+                        <p> г.Зацурупинск ул. им. Батьки Махно д.12</p>
+                        <p>код 457634</p>
+                    </div>
+                    <div class="footer_koord_worck">
+                        <p>РЕЖИМ РАБОТЫ:</p>
+                        <p>с утра и до последнего клиента</p>
+                    </div>
+                </div>
+                <div class="footer_logo"> <img src="src/img/logo_drev.png" alt="">
+                    <div class="footer_logo_title">
+                        <p>ООО "ДОБРОДРЕВ"</p>
+                        <p>ОКПО ЗКПО 45454</p>
+                    </div>
+                </div>
+                <div class="footer_telephon">
+                    <p>ТЕЛЕФОН</p>
+                    <p>+8 05554412232</p>
+                    <p>+8 05545458182</p>
+                    <div class="foooter_telephone_social">
+                        <img src="https://via.placeholder.com/30" alt="">
+                        <img src="https://via.placeholder.com/30" alt="">
+                        <img src="https://via.placeholder.com/30" alt="">
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
     <!--\ footer -->
+    <script src="src/slick/slick.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8">
+        $(".center_slider").slick({
+            dots: false,
+            infinite: false,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: true
+
+        });
+    </script>
+
 
 </body>
 
