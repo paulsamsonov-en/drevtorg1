@@ -10,8 +10,14 @@
     <link rel="stylesheet" href="src/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="src/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="src/slick/slick-theme.css" />
+    <link rel="stylesheet" href="src/PhotoSwipe/dist/photoswipe.css">
+    <link rel="stylesheet" href="src/PhotoSwipe/dist/default-skin/default-skin.css">
+
     <script src="https://kit.fontawesome.com/540b40f7e5.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="src\PhotoSwipe\dist\photoswipe.min.js"></script>
+    <script src="src\PhotoSwipe\dist\photoswipe-ui-default.min.js"></script>
+    <script src="src/js/script.js"></script>
 
 </head>
 
@@ -104,7 +110,8 @@
             </div>
 
         </div>
-        <div class="about__wrap__image"><img class="about__wrap__image_item" src="src/img/interer_1.png" alt="интерьер"></div>
+        <div class="about__wrap__image">
+            <!--<img class="about__wrap__image_item" src="src/img/interer_1.png" alt="интерьер">--></div>
 
     </section>
     <!-- /About us -->
@@ -185,7 +192,7 @@
 
 
     <section class="out-wrapper section-about_us">
-        <div class="about__wrap__image"><img class="about__wrap__image_item" src="src/img/interer_2.png" alt="#"></div>
+        <div class="about__wrap__image_2"></div>
         <div class="about__wrap">
             <div class="about__wrap_text">
                 <h2 class="about__wrap__text_title">ЗАБОТИМСЯ О ВАС</h2>
@@ -218,15 +225,15 @@
             <h3 class="bestsaller_title">НАШИ ПРЕИМУЩЕСТВА</h3>
             <div class="bonus_wrap">
                 <div class="bonus_item">
-                    <div class="bonus_item_logo"> <img src="" alt=""></div>
+                    <div class="bonus_item_logo"> <img class="bonus_item_logo_image" src="src/img/icon/protection-shield-with-a-check-mark.png" alt=""></div>
                     <div class="bonus_item_title">Расширенная гарантия на всю продукцию</div>
                 </div>
                 <div class="bonus_item">
-                    <div class="bonus_item_logo"> <img src="" alt=""></div>
+                    <div class="bonus_item_logo"> <img class="bonus_item_logo_image" src="src/img/icon/handshake.png" alt=""></div>
                     <div class="bonus_item_title">Эксклюзивность и индивидуальный подход к каждому клиенту</div>
                 </div>
                 <div class="bonus_item">
-                    <div class="bonus_item_logo"> <img src="" alt=""></div>
+                    <div class="bonus_item_logo"> <img class="bonus_item_logo_image" src="src/img/icon/five-stars-outlines.png" alt=""></div>
                     <div class="bonus_item_title">Доступность мебели и высокое качество сервиса</div>
                 </div>
 
@@ -239,11 +246,132 @@
     <!-- gallery-->
     <section class="out-wrapper section-gallery">
         <div class="main_wrapper">
-            gallery
+            <div class="gallery_wrap">
+                <div class="gallery_title">
+                    <h2 class="gallery_title_head">Галлерея</h2>
+                    <article class="gallery_title_subtitle"><a class="gallery_title_subtitle_item" href="#">
+                    Смотреть все >
+                </a></article>
+                </div>
+                <div class="slaider_wrapper">
+                    <div class="gallery">
+                        <div class="gallery_smoll">
+                            <div class="gallery_smoll_items">
+                                <img class="gallery_smoll_img" src="src/img/slider/1.jpg" alt="">
+                            </div>
+                            <div class="gallery_smoll_items">
+                                <img class="gallery_smoll_img" src="src/img/slider/2.jpeg" alt="">
+                            </div>
+                            <div class="gallery_smoll_items">
+                                <img class="gallery_smoll_img" src="src/img/slider/3.jpg" alt="">
+                            </div>
+                            <div class="gallery_smoll_items">
+                                <img class="gallery_smoll_img" src="src/img/slider/4.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="gallery_prew">
+                            <div class="gallery_prew_items ">
+                                <img src="src/img/slider/1.jpg" alt="">
+                            </div>
+                            <div class="gallery_prew_items">
+                                <img src="src/img/slider/2.jpeg" alt="">
+                            </div>
+                            <div class="gallery_prew_items">
+                                <img src="src/img/slider/3.jpg" alt="">
+                            </div>
+                            <div class="gallery_prew_items">
+                                <img src="src/img/slider/4.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tabheader__items">
+                        <div class="tabheader__item">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="tabheader__item">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="tabheader__item">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="tabheader__item">
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
         </div>
     </section>
     <!--\ gallery -->
+    <!-- gallery_oversize -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 
+        <!-- Это отдельный элемент, так как непрозрачность анимации выполняется быстрее, чем rgba  -->
+        <div class="pswp__bg"></div>
+
+        <!-- Обертка слайдов с переполнением: скрыто. -->
+        <div class="pswp__scroll-wrap">
+
+            <!-- Контейнер для слайдов.
+                    PhotoSwipe хранит только 3 из них в DOM для экономии памяти.
+                    Не изменяйте эти 3 элемента pswp__item, данные добавляются позже. -->
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <!-- Интерфейс по умолчанию (PhotoSwipeUI_Default) поверх скользящей области. Может быть изменено. -->
+            <div class="pswp__ui pswp__ui--hidden">
+
+                <div class="pswp__top-bar">
+
+                    <!--  Элементы управления говорят сами за себя. Заказ можно изменить. -->
+
+                    <div class="pswp__counter"></div>
+
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                    <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                    <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                    <!--элемент получит класс pswp__preloader - активен, когда работает предварительный загрузчик -->
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div>
+
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                    </button>
+
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                    </button>
+
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- /\gallery_oversize/\ -->
 
     <!-- footer-->
     <section class="out-wrapper section-footer">
@@ -260,25 +388,26 @@
                         <p>с утра и до последнего клиента</p>
                     </div>
                 </div>
-                <div class="footer_logo"> <img src="src/img/logo_drev.png" alt="">
+                <div class="footer_logo"> <img class="footer_logo_img" src="src/img/logo_drev.png" alt="">
                     <div class="footer_logo_title">
                         <p>ООО "ДОБРОДРЕВ"</p>
                         <p>ОКПО ЗКПО 45454</p>
                     </div>
                 </div>
                 <div class="footer_telephon">
-                    <p>ТЕЛЕФОН</p>
+                    <h3>ТЕЛЕФОН:</h3>
                     <p>+8 05554412232</p>
                     <p>+8 05545458182</p>
-                    <div class="foooter_telephone_social">
-                        <img src="https://via.placeholder.com/30" alt="">
-                        <img src="https://via.placeholder.com/30" alt="">
-                        <img src="https://via.placeholder.com/30" alt="">
+                    <div class="footer_telephon_social">
+                        <a href="https://www.viber.com" target="_blank"><i class="fab fa-viber"></i></a>
+                        <a href="https://web.telegram.org" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+                        <a href="https://www.whatsapp.com" target="_blank"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
 
             </div>
         </div>
+        <div class="developer"> Developed by Paul Sturmann © 2021 </div>
     </section>
     <!--\ footer -->
     <script src="src/slick/slick.min.js" type="text/javascript" charset="utf-8"></script>
