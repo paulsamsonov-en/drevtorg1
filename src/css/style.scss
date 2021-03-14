@@ -654,7 +654,7 @@
             // --footer--//
             .section-head_questions {
                 @include intro;
-                font-size: 36px;
+                font-size: 42px;
                 text-align: center;
                 & h1 {
                     margin-top: 100px;
@@ -676,7 +676,7 @@
                 align-items: center;
                 justify-content: center;
                 text-align: left;
-                margin: 50px auto;
+                margin: 100px auto;
                 &_questions {
                     padding-top: 30px;
                     padding-left: 30px;
@@ -684,24 +684,118 @@
                     height: 110px;
                     text-align: left;
                     border-bottom: 2px solid gray;
-                    &_plus {
-                        position: relative;
-                        border: 3px dotted rgb(12, 0, 0);
-                        width: 3px;
-                        height: 3px;
-                        background-color: rgb(246, 244, 244);
-                        box-sizing: border-box;
-                        transform: scale(11);
-                    }
                 }
                 &_answer {
                     padding-top: 30px;
                     padding-left: 30px;
-                    height: 110px;
+                    height: 140px;
                     width: 100%;
                     text-align: left;
                     border-bottom: 2px solid gray;
                     display: none;
                     background: rgb(207, 206, 206);
+                }
+            }
+            
+            .plus {
+                margin-right: 30px;
+                float: right;
+                width: 30px;
+                height: 30px;
+                position: relative;
+            }
+            
+            .vert {
+                margin: 0px auto;
+                width: 5px;
+                height: 30px;
+                background: rgb(134, 133, 133);
+            }
+            
+            .gorinont {
+                position: absolute;
+                top: 12.5px;
+                width: 30px;
+                height: 5px;
+                background: rgb(134, 133, 133);
+            }
+            
+            .section-form {
+                .contact-form {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    &__title {
+                        font-size: 28px;
+                        font-weight: $fw-medium;
+                        margin: 30px 0 30px 0;
+                        padding-left: 13%;
+                    }
+                    &__input-wrapper {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    &__input {
+                        width: 33%;
+                        font-size: 24px;
+                        margin: 50px;
+                        border-bottom: 2px solid #ddd8d8;
+                    }
+                    &__button {
+                        margin: 0 auto;
+                        width: 150px;
+                        height: 50px;
+                        background: $color-back;
+                        border-radius: 30px;
+                    }
+                }
+                .input-file__button {
+                    margin: 0 auto;
+                    width: 150px;
+                    height: 50px;
+                    background: $color-back;
+                    border-radius: 30px;
+                }
+            }
+            
+            .section-pay {
+                & h1 {
+                    margin: 30px auto;
+                }
+                .section-pay_description {
+                    &_head {
+                        font-size: 34px;
+                        margin: 30px auto;
+                    }
+                    &_text {
+                        font-size: 28px;
+                        font-weight: $fw-regular;
+                    }
+                    &_var {
+                        font-size: 28px;
+                        margin: 30px auto;
+                    }
+                    &_rekvisit {
+                        text-align: center;
+                        font-size: 30px;
+                        margin: 30px auto;
+                    }
+                }
+            }
+            
+            .section-map {
+                & iframe {
+                    margin: 80px auto;
+                }
+            }
+            
+            .section-reclam {
+                .main_wrapper {
+                    display: flex;
+                    justify-content: center;
+                }
+                & iframe {
+                    margin: 40px auto;
                 }
             }
