@@ -1116,7 +1116,7 @@ body {
   background: #e9b979;
 }
 
-.section-olha_info_list {
+.section-olha_citate_info_list {
   background: #f1f1f1;
   font-family: 'Gotham Pro', sans-serif;
   list-style: disc outside;
@@ -1133,7 +1133,7 @@ body {
   padding: 10px;
 }
 
-.section-olha_info_list_item {
+.section-olha_citate_info_list_item {
   max-width: 70%;
   margin-bottom: 6px;
 }
