@@ -1,867 +1,881 @@
-                                                @font-face {
-                                                    font-family: 'Gotham Pro Narrow';
-                                                    src: url('../fonts/GothamProNarrow-Medium.eot');
-                                                    src: local('../fonts/Gotham Pro Narrow Medium'), local('../fonts/GothamProNarrow-Medium'), url('../fonts/GothamProNarrow-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/GothamProNarrow-Medium.woff') format('woff'), url('../fonts/GothamProNarrow-Medium.ttf') format('truetype');
-                                                    font-weight: 500;
-                                                    font-style: norma;
-                                                }
-                                                
-                                                @font-face {
-                                                    font-family: 'Gotham Pro bold';
-                                                    src: url('GothamPro-BoldItalic.eot');
-                                                    src: local('fonts/Gotham Pro Bold Italic'), local('GothamPro-BoldItalic'), url('../fonts/GothamPro-BoldItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/GothamPro-BoldItalic.woff') format('woff'), url('../fonts/GothamPro-BoldItalic.ttf') format('truetype');
-                                                    font-weight: bold;
-                                                    font-style: italic;
-                                                }
-                                                
-                                                @font-face {
-                                                    font-family: 'Gotham Pro';
-                                                    src: url('../fonts/GothamPro-LightItalic.eot');
-                                                    src: local('Gotham Pro Light Italic'), local('GothamPro-LightItalic'), url('../fonts/GothamPro-LightItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/GothamPro-LightItalic.woff') format('woff'), url('../fonts/GothamPro-LightItalic.ttf') format('truetype');
-                                                    font-weight: 300;
-                                                    font-style: italic;
-                                                }
-                                                
-                                                @font-face {
-                                                    font-family: 'Intro';
-                                                    src: url('../fonts/intro.eot');
-                                                    src: local('☺'), url('../fonts/intro.woff') format('woff'), url('../fonts/intro.ttf') format('truetype'), url('../fonts/intro.svg') format('svg');
-                                                    font-weight: normal;
-                                                    font-style: normal;
-                                                }
-                                                
-                                                //--Mixine--//
-                                                @mixin gothamReg {
-                                                    font-family: 'Gotham Pro', sans-serif;
-                                                }
-                                                
-                                                @mixin gotham {
-                                                    font-family: 'Gotham Pro Narrow', sans-serif;
-                                                }
-                                                
-                                                @mixin gothamBold {
-                                                    font-family: 'Gotham Pro bold', sans-serif;
-                                                }
-                                                
-                                                @mixin intro {
-                                                    font-family: 'Intro', sans-serif;
-                                                    font-size: large;
-                                                }
-                                                
-                                                @mixin text_about {
-                                                    color: white;
-                                                    padding-left: 27%;
-                                                    padding-right: 16%;
-                                                }
-                                                
-                                                @mixin text_title {
-                                                    font-family: 'Intro', sans-serif;
-                                                    font-weight: $fw-medium;
-                                                    font-size: 36px;
-                                                }
-                                                
-                                                //--Mixine--//
-                                                //===Variables====/
-                                                $fw-regular: 400;
-                                                $fw-medium: 500;
-                                                $fw-bold: 800;
-                                                $padding-vertical:200px;
-                                                $color-back: #e9b979;
-                                                //===Variables====/
-                                                /*--COMMON--*/
-                                                
-                                                a {
-                                                    text-decoration: none;
-                                                }
-                                                
-                                                body {
-                                                    @include gotham;
-                                                }
-                                                
-                                                .out-wrapper {
-                                                    width: 100%;
-                                                    background: none;
-                                                    display: flex;
-                                                    flex-direction: column;
-                                                    justify-content: center;
-                                                }
-                                                
-                                                .main_wrapper {
-                                                    max-width: 1452px;
-                                                    width: 100%;
-                                                    margin: 0 auto;
-                                                    &--color {
-                                                        background: $color-back;
-                                                    }
-                                                }
-                                                
-                                                .show {
-                                                    display: block;
-                                                }
-                                                
-                                                .hide {
-                                                    display: none;
-                                                }
-                                                
-                                                .fade {
-                                                    animation-name: fade;
-                                                    animation-duration: 1.5s;
-                                                }
-                                                
-                                                @keyframes fade {
-                                                    from {
-                                                        opacity: 0.1;
-                                                    }
-                                                    to {
-                                                        opacity: 1;
-                                                    }
-                                                }
-                                                /*--/COMMON--*/
-                                                
-                                                // --HEADER--
-                                                .section-header {
-                                                    width: 100%;
-                                                }
-                                                
-                                                .header {
-                                                    width: 100%;
-                                                    padding-top: 50px;
-                                                    padding-bottom: 50px;
-                                                    margin: 0px auto;
-                                                    width: 100%;
-                                                    margin: 0px auto;
-                                                    display: flex;
-                                                    flex-flow: row;
-                                                    justify-content: space-between;
-                                                    align-content: center;
-                                                    position: relative;
-                                                    & nav {
-                                                        width: 33.3%;
-                                                    }
-                                                }
-                                                
-                                                .nav-menu__info {
-                                                    display: flex;
-                                                    margin: 0;
-                                                    padding: 0;
-                                                    list-style: none;
-                                                    &-item {
-                                                        margin: 0px 16px;
-                                                        &-link {
-                                                            font-size: 15px;
-                                                            color: black;
-                                                            font-weight: $fw-regular;
-                                                            &--active {
-                                                                color: $color-back;
-                                                                font-weight: $fw-medium;
-                                                            }
+                                                        @font-face {
+                                                            font-family: 'Gotham Pro Narrow';
+                                                            src: url('../fonts/GothamProNarrow-Medium.eot');
+                                                            src: local('../fonts/Gotham Pro Narrow Medium'), local('../fonts/GothamProNarrow-Medium'), url('../fonts/GothamProNarrow-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/GothamProNarrow-Medium.woff') format('woff'), url('../fonts/GothamProNarrow-Medium.ttf') format('truetype');
+                                                            font-weight: 500;
+                                                            font-style: norma;
                                                         }
-                                                    }
-                                                }
-                                                
-                                                .header_logo {
-                                                    width: 33.3%;
-                                                    display: flex;
-                                                    align-items: center;
-                                                    justify-content: center;
-                                                    flex-direction: column;
-                                                    &_img a {
-                                                        max-width: 100px;
-                                                        max-height: 100px;
-                                                        margin: 0 auto;
-                                                    }
-                                                    &_title {
-                                                        display: block;
-                                                        margin: 0 auto;
-                                                        &_link {
-                                                            color: black;
-                                                            font-family: "Intro";
-                                                            font-size: 15px;
+                                                        
+                                                        @font-face {
+                                                            font-family: 'Gotham Pro bold';
+                                                            src: url('GothamPro-BoldItalic.eot');
+                                                            src: local('fonts/Gotham Pro Bold Italic'), local('GothamPro-BoldItalic'), url('../fonts/GothamPro-BoldItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/GothamPro-BoldItalic.woff') format('woff'), url('../fonts/GothamPro-BoldItalic.ttf') format('truetype');
+                                                            font-weight: bold;
+                                                            font-style: italic;
+                                                        }
+                                                        
+                                                        @font-face {
+                                                            font-family: 'Gotham Pro';
+                                                            src: url('../fonts/GothamPro-LightItalic.eot');
+                                                            src: local('Gotham Pro Light Italic'), local('GothamPro-LightItalic'), url('../fonts/GothamPro-LightItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/GothamPro-LightItalic.woff') format('woff'), url('../fonts/GothamPro-LightItalic.ttf') format('truetype');
+                                                            font-weight: 300;
+                                                            font-style: italic;
+                                                        }
+                                                        
+                                                        @font-face {
+                                                            font-family: 'Intro';
+                                                            src: url('../fonts/intro.eot');
+                                                            src: local('☺'), url('../fonts/intro.woff') format('woff'), url('../fonts/intro.ttf') format('truetype'), url('../fonts/intro.svg') format('svg');
+                                                            font-weight: normal;
+                                                            font-style: normal;
+                                                        }
+                                                        
+                                                        //--Mixine--//
+                                                        @mixin gothamReg {
+                                                            font-family: 'Gotham Pro', sans-serif;
+                                                        }
+                                                        
+                                                        @mixin gotham {
+                                                            font-family: 'Gotham Pro Narrow', sans-serif;
+                                                        }
+                                                        
+                                                        @mixin gothamBold {
+                                                            font-family: 'Gotham Pro bold', sans-serif;
+                                                        }
+                                                        
+                                                        @mixin intro {
+                                                            font-family: 'Intro', sans-serif;
+                                                            font-size: large;
+                                                        }
+                                                        
+                                                        @mixin text_about {
+                                                            color: white;
+                                                            padding-left: 27%;
+                                                            padding-right: 16%;
+                                                        }
+                                                        
+                                                        @mixin text_title {
+                                                            font-family: 'Intro', sans-serif;
                                                             font-weight: $fw-medium;
+                                                            font-size: 36px;
                                                         }
-                                                    }
-                                                }
-                                                
-                                                .header_wrap {
-                                                    position: absolute;
-                                                    bottom: 35px;
-                                                    right: 40px;
-                                                    display: flex;
-                                                    flex-direction: row;
-                                                    justify-content: center;
-                                                    &_btn_basket {
-                                                        height: 20x;
-                                                        width: 20px;
-                                                        padding: 0px;
-                                                        color: black;
-                                                        font-size: $fw-medium;
-                                                        display: flex;
-                                                        justify-content: center;
-                                                        align-items: center;
-                                                        text-decoration: none;
-                                                    }
-                                                }
-                                                
-                                                .header_search {
-                                                    line-height: 1px;
-                                                    z-index: 5;
-                                                    transform: translate(-50%, 50%);
-                                                    background: whitesmoke;
-                                                    height: 30px;
-                                                    padding: 2px;
-                                                    display: flex;
-                                                    flex-direction: row;
-                                                    justify-content: center;
-                                                    &:hover {
-                                                        border: 1px solid black;
-                                                    }
-                                                    &_form {
-                                                        border: none;
-                                                        background: none;
-                                                        outline: none;
-                                                        float: left;
-                                                        padding: 0px;
-                                                        color: black;
-                                                        font-size: $fw-medium;
-                                                        transition: 2s;
-                                                        line-height: 30px;
-                                                        width: 0px;
-                                                        transition: 1s;
-                                                    }
-                                                    &_btn_search {
-                                                        color: black;
-                                                        float: right;
-                                                        height: 20px;
-                                                        width: 20px;
-                                                        margin-left: 3px;
-                                                        background: white;
-                                                        display: flex;
-                                                        justify-content: center;
-                                                        align-items: center;
-                                                        text-decoration: none;
-                                                    }
-                                                }
-                                                
-                                                .header_search:hover>.header_search_form {
-                                                    width: 230px;
-                                                    padding: 0 5px;
-                                                }
-                                                
-                                                // --/HEADER--
-                                                //---Banner--- 
-                                                .section-banner {
-                                                    width: 100%;
-                                                    min-height: 585px;
-                                                    background-size: cover;
-                                                    // background-repeat: no-repeat;
-                                                    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url(../img/foto.png);
-                                                    .main_wrapper {
-                                                        height: 100%;
-                                                        padding-top: 120px;
-                                                        padding-bottom: 154px;
-                                                    }
-                                                }
-                                                
-                                                .banner {
-                                                    display: flex;
-                                                    flex-flow: column;
-                                                    align-items: center;
-                                                    justify-content: center;
-                                                    color: whitesmoke;
-                                                    &__subtitle {
-                                                        font-size: 18px;
-                                                        font-weight: $fw-regular;
-                                                        margin-bottom: 30px;
-                                                    }
-                                                    &__title h1 {
-                                                        font-family: 'Intro';
-                                                        font-size: 108px;
-                                                        font-weight: $fw-bold;
-                                                        margin-bottom: 100px;
-                                                    }
-                                                    &__btn {
-                                                        height: 70px;
-                                                        width: 300px;
-                                                        background-color: $color-back;
-                                                        border-radius: 30px;
-                                                        font-size: 28px;
-                                                        font-weight: $fw-regular;
-                                                        display: flex;
-                                                        align-items: center;
-                                                        justify-content: center;
-                                                    }
-                                                }
-                                                
-                                                //---/Banner--- 
-                                                // --About us--
-                                                .section-about_us {
-                                                    width: 100%;
-                                                    height: 803px;
-                                                    background: $color-back;
-                                                    display: flex;
-                                                    flex-direction: row;
-                                                    justify-content: space-between;
-                                                    align-items: center;
-                                                }
-                                                
-                                                // .about__wrap__image {
-                                                //     width: 54vw;
-                                                //     height: 800px;
-                                                //     margin-right: 0px;
-                                                //     margin-left: auto;
-                                                //     background: url(../img/interer_1.png);
-                                                //     background-repeat: no-repeat;
-                                                //     background-size: contain;
-                                                //     &_item {
-                                                //         object-fit: cover;
-                                                //         overflow: hidden;
-                                                //     }
-                                                // }
-                                                /*стили для воторго блока, выравниванеи слева*/
-                                                
-                                                // .about__wrap__image_2 {
-                                                //     width: 54vw;
-                                                //     height: 800px;
-                                                //     margin-right: auto;
-                                                //     margin-left: 0px;
-                                                //     background: url(../img/interer_2.png);
-                                                //     background-repeat: no-repeat;
-                                                //     background-size: contain;
-                                                //     &_item {
-                                                //         object-fit: cover;
-                                                //         overflow: hidden;
-                                                //     }
-                                                // }
-                                                .about__wrap {
-                                                    display: flex;
-                                                    flex-direction: column;
-                                                    justify-content: center;
-                                                    align-items: center;
-                                                    margin: 30%, 22%, 11%, 22%;
-                                                    &_title {
-                                                        @include text_about;
-                                                        text-align: left;
-                                                        margin-bottom: 60px;
-                                                    }
-                                                    &_inner {
-                                                        @include text_about;
-                                                        text-align: justify;
-                                                        margin-bottom: 18px;
-                                                    }
-                                                    &_link {
-                                                        display: block;
-                                                        @include text_about;
-                                                        text-align: left;
-                                                        margin-top: 70px;
-                                                        &:hover {
-                                                            text-decoration: underline;
+                                                        
+                                                        //--Mixine--//
+                                                        //===Variables====/
+                                                        $fw-regular: 400;
+                                                        $fw-medium: 500;
+                                                        $fw-bold: 800;
+                                                        $padding-vertical:200px;
+                                                        $color-back: #e9b979;
+                                                        //===Variables====/
+                                                        /*--COMMON--*/
+                                                        
+                                                        a {
+                                                            text-decoration: none;
                                                         }
-                                                    }
-                                                }
-                                                
-                                                // --/About us--
-                                                // --Bestseller--
-                                                .section-bestseller {
-                                                    width: 100%;
-                                                    .main_wrapper {
-                                                        padding-top: 160px;
-                                                        padding-bottom: 220px;
-                                                    }
-                                                }
-                                                
-                                                .bestsaller_title {
-                                                    @include text_title;
-                                                    text-align: center;
-                                                    margin-bottom: 80px;
-                                                }
-                                                
-                                                .bestsaller_block {
-                                                    display: flex;
-                                                    flex-direction: column;
-                                                    align-items: center;
-                                                    justify-content: center;
-                                                    &_image {
-                                                        margin: 0 auto;
-                                                        width: 80%;
-                                                        box-shadow: -3px 3px 30px rgba(0, 0, 0, 0.3);
-                                                    }
-                                                    &_item {
-                                                        display: flex;
-                                                        flex-direction: row;
-                                                        justify-content: space-between;
-                                                        padding: 10%;
-                                                        margin: 0 auto;
-                                                        &_text {
+                                                        
+                                                        body {
+                                                            @include gotham;
+                                                        }
+                                                        
+                                                        .out-wrapper {
+                                                            width: 100%;
+                                                            background: none;
                                                             display: flex;
                                                             flex-direction: column;
-                                                            justify-content: left;
-                                                            &_title {
-                                                                text-align: left;
-                                                            }
-                                                            &_subtitle {
-                                                                text-align: left;
+                                                            justify-content: center;
+                                                        }
+                                                        
+                                                        .main_wrapper {
+                                                            max-width: 1452px;
+                                                            width: 100%;
+                                                            margin: 0 auto;
+                                                            &--color {
+                                                                background: $color-back;
                                                             }
                                                         }
-                                                        &_subtitle-btn {
-                                                            border: 3px solid $color-back;
-                                                            border-radius: 40px;
-                                                            text-align: center;
-                                                            color: $color-back;
-                                                            padding: 3px;
-                                                            height: 32px;
-                                                            width: 120px;
-                                                            margin-right: 2px;
+                                                        
+                                                        .show {
+                                                            display: block;
                                                         }
-                                                    }
-                                                }
-                                                
-                                                .bestsaller_link {
-                                                    display: flex;
-                                                    justify-content: center;
-                                                    & a {
-                                                        display: inline-block;
-                                                        color: $color-back;
-                                                        margin: 0 auto;
-                                                        text-align: center;
-                                                        text-decoration: underline;
-                                                    }
-                                                }
-                                                
-                                                // --/Bestseller--
-                                                // --Zabota--
-                                                .section-zabota {
-                                                    background: $color-back;
-                                                    width: 100%;
-                                                    .main_wrapper {
-                                                        padding-top: 120px;
-                                                        padding-bottom: 90px;
-                                                    }
-                                                }
-                                                
-                                                // --/Zabota--
-                                                // --bonus--
-                                                .section-bonus {
-                                                    width: 100%;
-                                                    .main_wrapper {
-                                                        padding-top: 194px;
-                                                        padding-bottom: 30px;
-                                                    }
-                                                }
-                                                
-                                                .bonus_wrap {
-                                                    width: 100%;
-                                                    display: flex;
-                                                    align-items: center;
-                                                    justify-content: center;
-                                                    .bonus_item {
-                                                        display: flex;
-                                                        flex-direction: column;
-                                                        align-items: center;
-                                                        justify-content: center;
-                                                        &_logo {
-                                                            width: 140px;
-                                                            height: 140px;
-                                                            -webkit-border-radius: 70px;
-                                                            -moz-border-radius: 70px;
-                                                            border-radius: 70px;
-                                                            border: 3px solid black;
+                                                        
+                                                        .hide {
+                                                            display: none;
+                                                        }
+                                                        
+                                                        .fade {
+                                                            animation-name: fade;
+                                                            animation-duration: 1.5s;
+                                                        }
+                                                        
+                                                        @keyframes fade {
+                                                            from {
+                                                                opacity: 0.1;
+                                                            }
+                                                            to {
+                                                                opacity: 1;
+                                                            }
+                                                        }
+                                                        /*--/COMMON--*/
+                                                        
+                                                        // --HEADER--
+                                                        .section-header {
+                                                            width: 100%;
+                                                        }
+                                                        
+                                                        .header {
+                                                            width: 100%;
+                                                            padding-top: 50px;
+                                                            padding-bottom: 50px;
+                                                            margin: 0px auto;
+                                                            width: 100%;
+                                                            margin: 0px auto;
                                                             display: flex;
+                                                            flex-flow: row;
+                                                            justify-content: space-between;
+                                                            align-content: center;
+                                                            position: relative;
+                                                            & nav {
+                                                                width: 33.3%;
+                                                            }
+                                                        }
+                                                        
+                                                        .nav-menu__info {
+                                                            display: flex;
+                                                            margin: 0;
+                                                            padding: 0;
+                                                            list-style: none;
+                                                            &-item {
+                                                                margin: 0px 16px;
+                                                                &-link {
+                                                                    font-size: 15px;
+                                                                    color: black;
+                                                                    font-weight: $fw-regular;
+                                                                    &--active {
+                                                                        color: $color-back;
+                                                                        font-weight: $fw-medium;
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                        
+                                                        .header_logo {
+                                                            width: 33.3%;
+                                                            display: flex;
+                                                            align-items: center;
+                                                            justify-content: center;
+                                                            flex-direction: column;
+                                                            &_img a {
+                                                                max-width: 100px;
+                                                                max-height: 100px;
+                                                                margin: 0 auto;
+                                                            }
+                                                            &_title {
+                                                                display: block;
+                                                                margin: 0 auto;
+                                                                &_link {
+                                                                    color: black;
+                                                                    font-family: "Intro";
+                                                                    font-size: 15px;
+                                                                    font-weight: $fw-medium;
+                                                                }
+                                                            }
+                                                        }
+                                                        
+                                                        .header_wrap {
+                                                            position: absolute;
+                                                            bottom: 35px;
+                                                            right: 40px;
+                                                            display: flex;
+                                                            flex-direction: row;
+                                                            justify-content: center;
+                                                            &_btn_basket {
+                                                                height: 20x;
+                                                                width: 20px;
+                                                                padding: 0px;
+                                                                color: black;
+                                                                font-size: $fw-medium;
+                                                                display: flex;
+                                                                justify-content: center;
+                                                                align-items: center;
+                                                                text-decoration: none;
+                                                            }
+                                                        }
+                                                        
+                                                        .header_search {
+                                                            line-height: 1px;
+                                                            z-index: 5;
+                                                            transform: translate(-50%, 50%);
+                                                            background: whitesmoke;
+                                                            height: 30px;
+                                                            padding: 2px;
+                                                            display: flex;
+                                                            flex-direction: row;
+                                                            justify-content: center;
+                                                            &:hover {
+                                                                border: 1px solid black;
+                                                            }
+                                                            &_form {
+                                                                border: none;
+                                                                background: none;
+                                                                outline: none;
+                                                                float: left;
+                                                                padding: 0px;
+                                                                color: black;
+                                                                font-size: $fw-medium;
+                                                                transition: 2s;
+                                                                line-height: 30px;
+                                                                width: 0px;
+                                                                transition: 1s;
+                                                            }
+                                                            &_btn_search {
+                                                                color: black;
+                                                                float: right;
+                                                                height: 20px;
+                                                                width: 20px;
+                                                                margin-left: 3px;
+                                                                background: white;
+                                                                display: flex;
+                                                                justify-content: center;
+                                                                align-items: center;
+                                                                text-decoration: none;
+                                                            }
+                                                        }
+                                                        
+                                                        .header_search:hover>.header_search_form {
+                                                            width: 230px;
+                                                            padding: 0 5px;
+                                                        }
+                                                        
+                                                        // --/HEADER--
+                                                        //---Banner--- 
+                                                        .section-banner {
+                                                            width: 100%;
+                                                            min-height: 585px;
+                                                            background-size: cover;
+                                                            // background-repeat: no-repeat;
+                                                            background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url(../img/foto.png);
+                                                            .main_wrapper {
+                                                                height: 100%;
+                                                                padding-top: 120px;
+                                                                padding-bottom: 154px;
+                                                            }
+                                                        }
+                                                        
+                                                        .banner {
+                                                            display: flex;
+                                                            flex-flow: column;
+                                                            align-items: center;
+                                                            justify-content: center;
+                                                            color: whitesmoke;
+                                                            &__subtitle {
+                                                                font-size: 18px;
+                                                                font-weight: $fw-regular;
+                                                                margin-bottom: 30px;
+                                                            }
+                                                            &__title h1 {
+                                                                font-family: 'Intro';
+                                                                font-size: 108px;
+                                                                font-weight: $fw-bold;
+                                                                margin-bottom: 100px;
+                                                            }
+                                                            &__btn {
+                                                                height: 70px;
+                                                                width: 300px;
+                                                                background-color: $color-back;
+                                                                border-radius: 30px;
+                                                                font-size: 28px;
+                                                                font-weight: $fw-regular;
+                                                                display: flex;
+                                                                align-items: center;
+                                                                justify-content: center;
+                                                                &:hover {
+                                                                    background-color: gray;
+                                                                    cursor: pointer;
+                                                                }
+                                                            }
+                                                        }
+                                                        
+                                                        //---/Banner--- 
+                                                        // --About us--
+                                                        .section-about_us {
+                                                            width: 100%;
+                                                            height: 803px;
+                                                            background: $color-back;
+                                                            display: flex;
+                                                            flex-direction: row;
+                                                            justify-content: space-between;
+                                                            align-items: center;
+                                                        }
+                                                        
+                                                        // .about__wrap__image {
+                                                        //     width: 54vw;
+                                                        //     height: 800px;
+                                                        //     margin-right: 0px;
+                                                        //     margin-left: auto;
+                                                        //     background: url(../img/interer_1.png);
+                                                        //     background-repeat: no-repeat;
+                                                        //     background-size: contain;
+                                                        //     &_item {
+                                                        //         object-fit: cover;
+                                                        //         overflow: hidden;
+                                                        //     }
+                                                        // }
+                                                        /*стили для воторго блока, выравниванеи слева*/
+                                                        
+                                                        // .about__wrap__image_2 {
+                                                        //     width: 54vw;
+                                                        //     height: 800px;
+                                                        //     margin-right: auto;
+                                                        //     margin-left: 0px;
+                                                        //     background: url(../img/interer_2.png);
+                                                        //     background-repeat: no-repeat;
+                                                        //     background-size: contain;
+                                                        //     &_item {
+                                                        //         object-fit: cover;
+                                                        //         overflow: hidden;
+                                                        //     }
+                                                        // }
+                                                        .about__wrap {
+                                                            display: flex;
+                                                            flex-direction: column;
+                                                            justify-content: center;
+                                                            align-items: center;
+                                                            margin: 30%, 22%, 11%, 22%;
+                                                            &_title {
+                                                                @include text_about;
+                                                                text-align: left;
+                                                                margin-bottom: 60px;
+                                                            }
+                                                            &_inner {
+                                                                @include text_about;
+                                                                text-align: justify;
+                                                                margin-bottom: 18px;
+                                                            }
+                                                            &_link {
+                                                                display: block;
+                                                                @include text_about;
+                                                                text-align: left;
+                                                                margin-top: 70px;
+                                                                &:hover {
+                                                                    text-decoration: underline;
+                                                                }
+                                                            }
+                                                        }
+                                                        
+                                                        // --/About us--
+                                                        // --Bestseller--
+                                                        .section-bestseller {
+                                                            width: 100%;
+                                                            .main_wrapper {
+                                                                padding-top: 160px;
+                                                                padding-bottom: 220px;
+                                                            }
+                                                        }
+                                                        
+                                                        .bestsaller_title {
+                                                            @include text_title;
+                                                            text-align: center;
+                                                            margin-bottom: 80px;
+                                                        }
+                                                        
+                                                        .bestsaller_block {
+                                                            display: flex;
+                                                            flex-direction: column;
                                                             align-items: center;
                                                             justify-content: center;
                                                             &_image {
+                                                                margin: 0 auto;
                                                                 width: 80%;
-                                                                height: 80%;
+                                                                box-shadow: -3px 3px 30px rgba(0, 0, 0, 0.3);
+                                                            }
+                                                            &_item {
+                                                                display: flex;
+                                                                flex-direction: row;
+                                                                justify-content: space-between;
+                                                                padding: 10%;
+                                                                margin: 0 auto;
+                                                                &_text {
+                                                                    display: flex;
+                                                                    flex-direction: column;
+                                                                    justify-content: left;
+                                                                    &_title {
+                                                                        text-align: left;
+                                                                    }
+                                                                    &_subtitle {
+                                                                        text-align: left;
+                                                                    }
+                                                                }
+                                                                &_subtitle-btn {
+                                                                    border: 3px solid $color-back;
+                                                                    border-radius: 40px;
+                                                                    text-align: center;
+                                                                    color: $color-back;
+                                                                    padding: 3px;
+                                                                    height: 32px;
+                                                                    width: 120px;
+                                                                    margin-right: 2px;
+                                                                }
                                                             }
                                                         }
-                                                        &_title {
-                                                            margin-top: 50px;
-                                                            width: 70%;
-                                                            font-size: 26px;
-                                                            text-align: center;
+                                                        
+                                                        .bestsaller_link {
+                                                            display: flex;
+                                                            justify-content: center;
+                                                            & a {
+                                                                display: inline-block;
+                                                                color: $color-back;
+                                                                margin: 0 auto;
+                                                                text-align: center;
+                                                                text-decoration: underline;
+                                                            }
                                                         }
-                                                    }
-                                                }
-                                                
-                                                // --/bonus--
-                                                // --gallery--
-                                                .section-gallery {
-                                                    width: 100%;
-                                                }
-                                                
-                                                .gallery_wrap {
-                                                    width: 100%;
-                                                    display: flex;
-                                                    flex-direction: row;
-                                                    flex-basis: 50%;
-                                                    align-items: center;
-                                                    justify-content: space-between;
-                                                    .gallery_title {
-                                                        width: 25vw;
-                                                        min-height: 800px;
-                                                        display: flex;
-                                                        flex-direction: column;
-                                                        align-items: flex-end;
-                                                        justify-content: center;
-                                                        &_head {
-                                                            @include intro;
-                                                            margin-bottom: 15px;
-                                                            font-size: 36px;
-                                                            padding-right: 50px;
+                                                        
+                                                        // --/Bestseller--
+                                                        // --Zabota--
+                                                        .section-zabota {
+                                                            background: $color-back;
+                                                            width: 100%;
+                                                            .main_wrapper {
+                                                                padding-top: 120px;
+                                                                padding-bottom: 90px;
+                                                            }
                                                         }
-                                                        &_subtitle {
-                                                            font-size: 20px;
-                                                            color: gray;
-                                                            font-weight: $fw-regular;
-                                                            padding-right: 50px;
-                                                            text-decoration: underline;
+                                                        
+                                                        // --/Zabota--
+                                                        // --bonus--
+                                                        .section-bonus {
+                                                            width: 100%;
+                                                            .main_wrapper {
+                                                                padding-top: 194px;
+                                                                padding-bottom: 30px;
+                                                            }
                                                         }
-                                                    }
-                                                }
-                                                
-                                                .slaider_wrapper {
-                                                    display: flex;
-                                                    flex-direction: column;
-                                                    align-items: center;
-                                                    justify-content: center;
-                                                    width: 100%;
-                                                    .gallery {
-                                                        width: 100%;
-                                                        height: 600px;
-                                                        display: flex;
-                                                        align-items: center;
-                                                        justify-content: center;
-                                                        .gallery_smoll {
+                                                        
+                                                        .bonus_wrap {
+                                                            width: 100%;
                                                             display: flex;
                                                             align-items: center;
                                                             justify-content: center;
-                                                            max-width: 660px;
-                                                            max-height: 540px;
-                                                            &_items img {
-                                                                height: 100%;
-                                                                max-width: 540px;
-                                                                max-height: 560px;
-                                                                object-fit: contain;
-                                                            }
-                                                            &_items_active {
-                                                                width: 100%;
-                                                                height: 100%;
-                                                                margin: 10px;
+                                                            .bonus_item {
+                                                                display: flex;
+                                                                flex-direction: column;
+                                                                align-items: center;
+                                                                justify-content: center;
+                                                                &_logo {
+                                                                    width: 140px;
+                                                                    height: 140px;
+                                                                    -webkit-border-radius: 70px;
+                                                                    -moz-border-radius: 70px;
+                                                                    border-radius: 70px;
+                                                                    border: 3px solid black;
+                                                                    display: flex;
+                                                                    align-items: center;
+                                                                    justify-content: center;
+                                                                    &_image {
+                                                                        width: 80%;
+                                                                        height: 80%;
+                                                                    }
+                                                                }
+                                                                &_title {
+                                                                    margin-top: 50px;
+                                                                    width: 70%;
+                                                                    font-size: 26px;
+                                                                    text-align: center;
+                                                                }
                                                             }
                                                         }
-                                                        .gallery_prew {
+                                                        
+                                                        // --/bonus--
+                                                        // --gallery--
+                                                        .section-gallery {
+                                                            width: 100%;
+                                                        }
+                                                        
+                                                        .gallery_wrap {
+                                                            width: 100%;
+                                                            display: flex;
+                                                            flex-direction: row;
+                                                            flex-basis: 50%;
+                                                            align-items: center;
+                                                            justify-content: space-between;
+                                                            .gallery_title {
+                                                                width: 25vw;
+                                                                min-height: 800px;
+                                                                display: flex;
+                                                                flex-direction: column;
+                                                                align-items: flex-end;
+                                                                justify-content: center;
+                                                                &_head {
+                                                                    @include intro;
+                                                                    margin-bottom: 15px;
+                                                                    font-size: 36px;
+                                                                    padding-right: 50px;
+                                                                }
+                                                                &_subtitle {
+                                                                    font-size: 20px;
+                                                                    color: gray;
+                                                                    font-weight: $fw-regular;
+                                                                    padding-right: 50px;
+                                                                    text-decoration: underline;
+                                                                }
+                                                            }
+                                                        }
+                                                        
+                                                        .slaider_wrapper {
                                                             display: flex;
                                                             flex-direction: column;
                                                             align-items: center;
                                                             justify-content: center;
-                                                            max-width: 400px;
-                                                            max-height: 500px;
-                                                            &_items img {
-                                                                display: block;
-                                                                margin: 10px;
-                                                                max-width: 300px;
-                                                                max-height: 180px;
+                                                            width: 100%;
+                                                            .gallery {
                                                                 width: 100%;
-                                                                height: 100%;
-                                                                object-fit: contain;
+                                                                height: 600px;
+                                                                display: flex;
+                                                                align-items: center;
+                                                                justify-content: center;
+                                                                .gallery_smoll {
+                                                                    display: flex;
+                                                                    align-items: center;
+                                                                    justify-content: center;
+                                                                    max-width: 660px;
+                                                                    max-height: 540px;
+                                                                    &_items img {
+                                                                        height: 100%;
+                                                                        max-width: 540px;
+                                                                        max-height: 560px;
+                                                                        object-fit: contain;
+                                                                    }
+                                                                    &_items_active {
+                                                                        width: 100%;
+                                                                        height: 100%;
+                                                                        margin: 10px;
+                                                                    }
+                                                                }
+                                                                .gallery_prew {
+                                                                    display: flex;
+                                                                    flex-direction: column;
+                                                                    align-items: center;
+                                                                    justify-content: center;
+                                                                    max-width: 400px;
+                                                                    max-height: 500px;
+                                                                    &_items img {
+                                                                        display: block;
+                                                                        margin: 10px;
+                                                                        max-width: 300px;
+                                                                        max-height: 180px;
+                                                                        width: 100%;
+                                                                        height: 100%;
+                                                                        object-fit: contain;
+                                                                    }
+                                                                }
+                                                            }
+                                                            .tabheader__items {
+                                                                display: flex;
+                                                                align-items: center;
+                                                                justify-content: center;
+                                                                .tabheader__item {
+                                                                    margin-left: 15px;
+                                                                    width: 15px;
+                                                                    height: 15px;
+                                                                    border: 3px solid rgb(172, 170, 170);
+                                                                    border-radius: 50%;
+                                                                }
+                                                                .tabheader__item_active {
+                                                                    background: rgb(172, 170, 170);
+                                                                }
                                                             }
                                                         }
-                                                    }
-                                                    .tabheader__items {
-                                                        display: flex;
-                                                        align-items: center;
-                                                        justify-content: center;
-                                                        .tabheader__item {
-                                                            margin-left: 15px;
-                                                            width: 15px;
-                                                            height: 15px;
-                                                            border: 3px solid rgb(172, 170, 170);
-                                                            border-radius: 50%;
-                                                        }
-                                                        .tabheader__item_active {
-                                                            background: rgb(172, 170, 170);
-                                                        }
-                                                    }
-                                                }
-                                                
-                                                // --/gallery--
-                                                // --footer--
-                                                .section-footer {
-                                                    width: 100%;
-                                                    background: $color-back;
-                                                    .main_wrapper {
-                                                        padding-top: 75px;
-                                                        padding-bottom: 80px;
-                                                    }
-                                                }
-                                                
-                                                .footer_wrap {
-                                                    display: flex;
-                                                    align-items: center;
-                                                    justify-content: space-between;
-                                                    font-weight: $fw-medium;
-                                                    .footer_koord {
-                                                        padding-left: 15px;
-                                                        width: 33.3%;
-                                                        &_adress {
-                                                            margin-bottom: 10px;
-                                                        }
-                                                    }
-                                                    .footer_logo {
-                                                        width: 33.3%;
-                                                        display: flex;
-                                                        flex-direction: column;
-                                                        align-items: center;
-                                                        justify-content: center;
-                                                        &_img {
-                                                            display: block;
-                                                            margin-bottom: 10px;
-                                                        }
-                                                    }
-                                                    .footer_telephon {
-                                                        width: 33.3%;
-                                                        display: flex;
-                                                        flex-direction: column;
-                                                        align-items: flex-end;
-                                                        justify-content: flex-end;
-                                                        padding-right: 15px;
-                                                        & h3 {
-                                                            margin-bottom: 10px;
-                                                        }
-                                                        &_social {
-                                                            margin-top: 20px;
-                                                            font-size: 20px;
-                                                            & a {
-                                                                margin: 0px 8px;
-                                                                text-decoration: none;
-                                                                color: black;
+                                                        
+                                                        // --/gallery--
+                                                        // --footer--
+                                                        .section-footer {
+                                                            width: 100%;
+                                                            background: $color-back;
+                                                            .main_wrapper {
+                                                                padding-top: 75px;
+                                                                padding-bottom: 80px;
                                                             }
                                                         }
-                                                    }
-                                                }
-                                                
-                                                .developer {
-                                                    text-align: center;
-                                                    font-size: 12px;
-                                                    color: gray;
-                                                }
-                                                
-                                                // --footer--//
-                                                .section-head_questions {
-                                                    @include intro;
-                                                    font-size: 42px;
-                                                    text-align: center;
-                                                    & h1 {
-                                                        margin-top: 100px;
-                                                    }
-                                                }
-                                                
-                                                .section-head_about {
-                                                    @include gotham;
-                                                    font-size: 26px;
-                                                    margin-top: 200px;
-                                                    color: $color-back;
-                                                }
-                                                
-                                                .quest_wrap {
-                                                    @include gotham;
-                                                    width: 100%;
-                                                    display: flex;
-                                                    flex-direction: column;
-                                                    align-items: center;
-                                                    justify-content: center;
-                                                    text-align: left;
-                                                    margin: 100px auto;
-                                                    &_questions {
-                                                        padding-top: 30px;
-                                                        padding-left: 30px;
-                                                        width: 100%;
-                                                        height: 110px;
-                                                        text-align: left;
-                                                        border-bottom: 2px solid gray;
-                                                    }
-                                                    &_answer {
-                                                        padding-top: 30px;
-                                                        padding-left: 30px;
-                                                        height: 140px;
-                                                        width: 100%;
-                                                        text-align: left;
-                                                        border-bottom: 2px solid gray;
-                                                        display: none;
-                                                        background: rgb(207, 206, 206);
-                                                    }
-                                                }
-                                                
-                                                .plus {
-                                                    margin-right: 30px;
-                                                    float: right;
-                                                    width: 30px;
-                                                    height: 30px;
-                                                    position: relative;
-                                                }
-                                                
-                                                .vert {
-                                                    margin: 0px auto;
-                                                    width: 5px;
-                                                    height: 30px;
-                                                    background: rgb(134, 133, 133);
-                                                }
-                                                
-                                                .gorinont {
-                                                    position: absolute;
-                                                    top: 12.5px;
-                                                    width: 30px;
-                                                    height: 5px;
-                                                    background: rgb(134, 133, 133);
-                                                }
-                                                
-                                                .section-form {
-                                                    .contact-form {
-                                                        display: flex;
-                                                        flex-direction: column;
-                                                        justify-content: center;
-                                                        &__title {
-                                                            font-size: 28px;
-                                                            font-weight: $fw-medium;
-                                                            margin: 30px 0 30px 0;
-                                                            padding-left: 13%;
-                                                        }
-                                                        &__input-wrapper {
+                                                        
+                                                        .footer_wrap {
                                                             display: flex;
                                                             align-items: center;
-                                                            justify-content: center;
+                                                            justify-content: space-between;
+                                                            font-weight: $fw-medium;
+                                                            .footer_koord {
+                                                                padding-left: 15px;
+                                                                width: 33.3%;
+                                                                &_adress {
+                                                                    margin-bottom: 10px;
+                                                                }
+                                                            }
+                                                            .footer_logo {
+                                                                width: 33.3%;
+                                                                display: flex;
+                                                                flex-direction: column;
+                                                                align-items: center;
+                                                                justify-content: center;
+                                                                &_img {
+                                                                    display: block;
+                                                                    margin-bottom: 10px;
+                                                                }
+                                                            }
+                                                            .footer_telephon {
+                                                                width: 33.3%;
+                                                                display: flex;
+                                                                flex-direction: column;
+                                                                align-items: flex-end;
+                                                                justify-content: flex-end;
+                                                                padding-right: 15px;
+                                                                & h3 {
+                                                                    margin-bottom: 10px;
+                                                                }
+                                                                &_social {
+                                                                    margin-top: 20px;
+                                                                    font-size: 20px;
+                                                                    & a {
+                                                                        margin: 0px 8px;
+                                                                        text-decoration: none;
+                                                                        color: black;
+                                                                    }
+                                                                }
+                                                            }
                                                         }
-                                                        &__input {
-                                                            width: 33%;
-                                                            font-size: 24px;
-                                                            margin: 50px;
-                                                            border-bottom: 2px solid #ddd8d8;
-                                                        }
-                                                        &__button {
-                                                            margin: 0 auto;
-                                                            width: 150px;
-                                                            height: 50px;
-                                                            background: $color-back;
-                                                            border-radius: 30px;
-                                                        }
-                                                    }
-                                                    .input-file__button {
-                                                        margin: 0 auto;
-                                                        width: 150px;
-                                                        height: 50px;
-                                                        background: $color-back;
-                                                        border-radius: 30px;
-                                                    }
-                                                }
-                                                
-                                                .section-pay {
-                                                    & h1 {
-                                                        margin: 30px auto;
-                                                    }
-                                                    .section-pay_description {
-                                                        &_head {
-                                                            font-size: 34px;
-                                                            margin: 30px auto;
-                                                        }
-                                                        &_text {
-                                                            font-size: 28px;
-                                                            font-weight: $fw-regular;
-                                                        }
-                                                        &_var {
-                                                            font-size: 28px;
-                                                            margin: 30px auto;
-                                                        }
-                                                        &_rekvisit {
+                                                        
+                                                        .developer {
                                                             text-align: center;
-                                                            font-size: 30px;
-                                                            margin: 30px auto;
+                                                            font-size: 12px;
+                                                            color: gray;
                                                         }
-                                                    }
-                                                }
-                                                
-                                                .section-map {
-                                                    & iframe {
-                                                        margin: 80px auto;
-                                                    }
-                                                }
-                                                
-                                                .section-reclam {
-                                                    .main_wrapper {
-                                                        display: flex;
-                                                        justify-content: center;
-                                                    }
-                                                    & iframe {
-                                                        margin: 40px auto;
-                                                    }
-                                                }
-                                                /*--page news--*/
-                                                
-                                                .section-news_block {
-                                                    width: 100%;
-                                                    height: 586px;
-                                                    background: $color-back;
-                                                    margin-top: 50px;
-                                                    margin-bottom: 50px;
-                                                    display: flex;
-                                                    flex-direction: row;
-                                                    justify-content: space-between;
-                                                }
-                                                /*--/page news--*/
-                                                /*==section-page about olha==*/
-                                                
-                                                .section-olha {
-                                                    .section-olha_wrap {
-                                                        margin: 0 auto;
-                                                        display: flex;
-                                                        max-width: 1024px;
-                                                        flex-direction: column;
-                                                        align-items: stretch;
-                                                        justify-content: center;
-                                                    }
-                                                    &_subtitile {
-                                                        text-align: center;
-                                                        background: rgb(235, 232, 232);
-                                                        border: 2px solid rgb(253, 253, 253);
-                                                        padding: 20px;
-                                                        margin: 30px;
-                                                    }
-                                                    &_article_header {
-                                                        text-align: center;
-                                                        width: 100%;
-                                                        margin-top: 30px;
-                                                        margin-bottom: 30px;
-                                                        padding-bottom: 8px;
-                                                    }
-                                                    &_article_header:after {
-                                                        content: "";
-                                                        display: block;
-                                                        background: rgb(177, 172, 172);
-                                                        height: 2px;
-                                                        width: 100%;
-                                                    }
-                                                    &_info {
-                                                        text-align: left;
-                                                        @include gothamReg;
-                                                        font-weight: $fw-bold;
-                                                        margin-top: 16px;
-                                                        margin-bottom: 16px;
-                                                    }
-                                                    &_citate {
-                                                        text-align: center;
-                                                        padding: 1%;
-                                                        background: $color-back;
-                                                    }
-                                                    &_info_list {
-                                                        background: rgb(241, 241, 241);
-                                                        @include gothamReg;
-                                                        list-style: disc outside;
-                                                        display: flex;
-                                                        flex-direction: column;
-                                                        align-items: center;
-                                                        padding: 10px;
-                                                        &_item {
-                                                            max-width: 70%;
-                                                            margin-bottom: 6px;
+                                                        
+                                                        // --footer--//
+                                                        .section-head_questions {
+                                                            @include intro;
+                                                            font-size: 42px;
+                                                            text-align: center;
+                                                            & h1 {
+                                                                margin-top: 100px;
+                                                            }
                                                         }
-                                                    }
-                                                }
-                                                /*==/section-page about olha==*/
+                                                        
+                                                        .section-head_about {
+                                                            @include gotham;
+                                                            font-size: 26px;
+                                                            margin-top: 200px;
+                                                            color: $color-back;
+                                                        }
+                                                        
+                                                        .quest_wrap {
+                                                            @include gotham;
+                                                            width: 100%;
+                                                            display: flex;
+                                                            flex-direction: column;
+                                                            align-items: center;
+                                                            justify-content: center;
+                                                            text-align: left;
+                                                            margin: 100px auto;
+                                                            &_questions {
+                                                                padding-top: 30px;
+                                                                padding-left: 30px;
+                                                                width: 100%;
+                                                                height: 110px;
+                                                                text-align: left;
+                                                                border-bottom: 2px solid gray;
+                                                            }
+                                                            &_answer {
+                                                                padding-top: 30px;
+                                                                padding-left: 30px;
+                                                                height: 140px;
+                                                                width: 100%;
+                                                                text-align: left;
+                                                                border-bottom: 2px solid gray;
+                                                                display: none;
+                                                                background: rgb(207, 206, 206);
+                                                            }
+                                                        }
+                                                        
+                                                        .plus {
+                                                            margin-right: 30px;
+                                                            float: right;
+                                                            width: 30px;
+                                                            height: 30px;
+                                                            position: relative;
+                                                        }
+                                                        
+                                                        .vert {
+                                                            margin: 0px auto;
+                                                            width: 5px;
+                                                            height: 30px;
+                                                            background: rgb(134, 133, 133);
+                                                        }
+                                                        
+                                                        .gorinont {
+                                                            position: absolute;
+                                                            top: 12.5px;
+                                                            width: 30px;
+                                                            height: 5px;
+                                                            background: rgb(134, 133, 133);
+                                                        }
+                                                        
+                                                        .section-form {
+                                                            .contact-form {
+                                                                display: flex;
+                                                                flex-direction: column;
+                                                                justify-content: center;
+                                                                &__title {
+                                                                    font-size: 28px;
+                                                                    font-weight: $fw-medium;
+                                                                    margin: 30px 0 30px 0;
+                                                                    padding-left: 13%;
+                                                                }
+                                                                &__input-wrapper {
+                                                                    display: flex;
+                                                                    align-items: center;
+                                                                    justify-content: center;
+                                                                }
+                                                                &__input {
+                                                                    width: 33%;
+                                                                    font-size: 24px;
+                                                                    margin: 50px;
+                                                                    border-bottom: 2px solid #ddd8d8;
+                                                                }
+                                                                &__button {
+                                                                    margin: 0 auto;
+                                                                    width: 150px;
+                                                                    height: 50px;
+                                                                    background: $color-back;
+                                                                    border-radius: 30px;
+                                                                }
+                                                            }
+                                                            .input-file__button {
+                                                                margin: 0 auto;
+                                                                width: 150px;
+                                                                height: 50px;
+                                                                background: $color-back;
+                                                                border-radius: 30px;
+                                                            }
+                                                        }
+                                                        
+                                                        .section-pay {
+                                                            & h1 {
+                                                                margin: 30px auto;
+                                                            }
+                                                            .section-pay_description {
+                                                                &_head {
+                                                                    font-size: 34px;
+                                                                    margin: 30px auto;
+                                                                }
+                                                                &_text {
+                                                                    font-size: 28px;
+                                                                    font-weight: $fw-regular;
+                                                                }
+                                                                &_var {
+                                                                    font-size: 28px;
+                                                                    margin: 30px auto;
+                                                                }
+                                                                &_rekvisit {
+                                                                    text-align: center;
+                                                                    font-size: 30px;
+                                                                    margin: 30px auto;
+                                                                }
+                                                            }
+                                                        }
+                                                        
+                                                        .section-map {
+                                                            & iframe {
+                                                                margin: 80px auto;
+                                                            }
+                                                        }
+                                                        
+                                                        .section-reclam {
+                                                            .main_wrapper {
+                                                                display: flex;
+                                                                justify-content: center;
+                                                            }
+                                                            & iframe {
+                                                                margin: 40px auto;
+                                                            }
+                                                        }
+                                                        /*--page news--*/
+                                                        
+                                                        .section-news_block {
+                                                            width: 100%;
+                                                            height: 586px;
+                                                            background: $color-back;
+                                                            margin-top: 50px;
+                                                            margin-bottom: 50px;
+                                                            display: flex;
+                                                            flex-direction: row;
+                                                            justify-content: space-between;
+                                                        }
+                                                        /*--/page news--*/
+                                                        /*==section-page about olha==*/
+                                                        
+                                                        .section-olha {
+                                                            .section-olha_wrap {
+                                                                margin: 0 auto;
+                                                                display: flex;
+                                                                max-width: 1024px;
+                                                                flex-direction: column;
+                                                                align-items: stretch;
+                                                                justify-content: center;
+                                                            }
+                                                            &_subtitile {
+                                                                text-align: center;
+                                                                background: rgb(235, 232, 232);
+                                                                border: 2px solid rgb(253, 253, 253);
+                                                                padding: 20px;
+                                                                margin: 30px;
+                                                            }
+                                                            &_article_header {
+                                                                text-align: center;
+                                                                width: 100%;
+                                                                margin-top: 30px;
+                                                                margin-bottom: 30px;
+                                                                padding-bottom: 8px;
+                                                            }
+                                                            &_article_header:after {
+                                                                content: "";
+                                                                display: block;
+                                                                background: rgb(177, 172, 172);
+                                                                height: 2px;
+                                                                width: 100%;
+                                                            }
+                                                            &_info {
+                                                                text-align: left;
+                                                                @include gothamReg;
+                                                                font-weight: $fw-bold;
+                                                                margin-top: 16px;
+                                                                margin-bottom: 16px;
+                                                            }
+                                                            &_citate {
+                                                                text-align: center;
+                                                                padding: 1%;
+                                                                background: $color-back;
+                                                            }
+                                                            &_info_list {
+                                                                background: rgb(241, 241, 241);
+                                                                @include gothamReg;
+                                                                list-style: disc outside;
+                                                                display: flex;
+                                                                flex-direction: column;
+                                                                align-items: center;
+                                                                padding: 10px;
+                                                                &_item {
+                                                                    max-width: 70%;
+                                                                    margin-bottom: 6px;
+                                                                }
+                                                            }
+                                                        }
+                                                        /*==/section-page about olha==*/
+                                                        
+                                                        .section-dev {
+                                                            width: 100%;
+                                                            display: flex;
+                                                            justify-content: center;
+                                                            &-text {
+                                                                text-align: center;
+                                                                margin: 20vh;
+                                                            }
+                                                        }
