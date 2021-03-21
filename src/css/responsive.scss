@@ -1,0 +1,70 @@
+      /*-mixine-*/
+      
+      @mixin imageCenter {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          & img {
+              max-width: 100%;
+              height: auto;
+              display: block;
+              margin: 20px auto;
+          }
+      }
+      /*-mixine-*/
+      /*adaptive*/
+      
+      @media (max-width:1200px) {
+          .banner__title h1 {
+              font-size: 52px;
+          }
+          .section-news_block {
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              margin-bottom: 30px;
+              height: 1000px;
+          }
+          .section-about_us {
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              margin-bottom: 30px;
+              height: 1400px;
+          }
+          .about__wrap {
+              margin: 20%, 2%, 11%, 2%;
+          }
+          .news_block_image {
+              @include imageCenter;
+          }
+          .about__wrap__image {
+              @include imageCenter;
+          }
+          .about__wrap__image_2 {
+              @include imageCenter;
+          }
+          .footer_wrap {
+              flex-direction: column;
+              justify-content: space-between;
+              .footer_telephon {
+                  align-items: center;
+              }
+          }
+          .bonus_wrap {
+              flex-direction: column;
+              .bonus_item {
+                  margin-bottom: 20px;
+              }
+          }
+          .bestsaller_title {
+              font-size: 28px;
+          }
+          .gallery_wrap {
+              flex-direction: column;
+          }
+          .gallery_smoll {
+              display: none;
+          }
+      }
+      /*\adaptive\*/
