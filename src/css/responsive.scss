@@ -15,6 +15,14 @@
       /*adaptive*/
       
       @media (max-width:1200px) {
+          .section-header {
+              .header {
+                  justify-content: space-evenly;
+                  .nav-menu__info-item {
+                      margin: 0 3px;
+                  }
+              }
+          }
           .banner__title h1 {
               font-size: 52px;
           }
@@ -33,7 +41,17 @@
               height: 1400px;
           }
           .about__wrap {
-              margin: 20%, 2%, 11%, 2%;
+              margin: 0;
+              &_title {
+                  text-align: center;
+                  margin-bottom: 20px;
+                  padding-left: 0;
+                  padding-right: 0;
+              }
+              &_inner {
+                  padding-left: 10%;
+                  padding-right: 10%;
+              }
           }
           .news_block_image {
               @include imageCenter;
@@ -44,13 +62,6 @@
           .about__wrap__image_2 {
               @include imageCenter;
           }
-          .footer_wrap {
-              flex-direction: column;
-              justify-content: space-between;
-              .footer_telephon {
-                  align-items: center;
-              }
-          }
           .bonus_wrap {
               flex-direction: column;
               .bonus_item {
@@ -60,11 +71,47 @@
           .bestsaller_title {
               font-size: 28px;
           }
+          .bestsaller_block {
+              &_item {
+                  flex-direction: column;
+                  justify-content: space-evenly;
+                  align-items: flex-end;
+                  &_subtitle-btn {
+                      margin-top: 5px;
+                  }
+              }
+          }
           .gallery_wrap {
               flex-direction: column;
+              justify-content: center;
+              .gallery_title {
+                  align-items: center;
+              }
           }
-          .gallery_smoll {
-              display: none;
+          .tabheader__items {
+              margin-bottom: 15px;
+          }
+          /*--article_about--*/
+          .section-olha {
+              .section-olha_wrap {
+                  max-width: 800px;
+                  background: red;
+              }
+          }
+          /*--article_about--*/
+          .footer_wrap {
+              flex-direction: column;
+              justify-content: space-between;
+              .footer_koord {
+                  text-align: center;
+              }
+              .footer_logo {
+                  text-align: center;
+              }
+              .footer_telephon {
+                  padding: 0;
+                  align-items: center;
+              }
           }
       }
       /*\adaptive\*/
