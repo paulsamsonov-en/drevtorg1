@@ -101,6 +101,11 @@ body {
 /*--/COMMON--*/
 .section-header {
   width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background: white;
 }
 
 .header {
@@ -127,6 +132,10 @@ body {
 
 .header nav {
   width: 33.3%;
+}
+
+.nav-menu__burger {
+  display: none;
 }
 
 .nav-menu__info {
@@ -168,12 +177,25 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  z-index: 30;
+}
+
+.header_logo_img {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50px;
+          flex: 0 0 50px;
+  overflow: hidden;
 }
 
 .header_logo_img a {
-  max-width: 100px;
-  max-height: 100px;
   margin: 0 auto;
+}
+
+.header_logo_img img {
+  max-width: 50px;
+  max-height: 50px;
+  width: 100%;
+  height: auto;
 }
 
 .header_logo_title {
@@ -224,7 +246,7 @@ body {
 
 .header_search {
   line-height: 1px;
-  z-index: 5;
+  z-index: 2;
   -webkit-transform: translate(-50%, 50%);
           transform: translate(-50%, 50%);
   background: whitesmoke;
@@ -288,6 +310,7 @@ body {
 
 .section-banner {
   width: 100%;
+  padding-top: 70px;
   min-height: 585px;
   background-size: cover;
   background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.3))), url(../img/foto.png);
@@ -865,6 +888,7 @@ body {
 .section-head_questions {
   font-family: 'Intro', sans-serif;
   font-size: large;
+  padding-top: 40px;
   font-size: 42px;
   text-align: center;
 }
@@ -1061,6 +1085,10 @@ body {
 
 /*--/page news--*/
 /*==section-page about olha==*/
+.section-olha {
+  padding-top: 40px;
+}
+
 .section-olha .section-olha_wrap {
   margin: 0 auto;
   display: -webkit-box;

@@ -121,6 +121,11 @@
     // --HEADER--
     .section-header {
         width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        background: white;
     }
     
     .header {
@@ -138,6 +143,10 @@
         & nav {
             width: 33.3%;
         }
+    }
+    
+    .nav-menu__burger {
+        display: none;
     }
     
     .nav-menu__info {
@@ -165,10 +174,19 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        z-index: 30;
+        &_img {
+            flex: 0 0 50px;
+            overflow: hidden;
+        }
         &_img a {
-            max-width: 100px;
-            max-height: 100px;
             margin: 0 auto;
+        }
+        &_img img {
+            max-width: 50px;
+            max-height: 50px;
+            width: 100%;
+            height: auto;
         }
         &_title {
             display: block;
@@ -204,7 +222,7 @@
     
     .header_search {
         line-height: 1px;
-        z-index: 5;
+        z-index: 2;
         transform: translate(-50%, 50%);
         background: whitesmoke;
         height: 30px;
@@ -251,6 +269,7 @@
     //---Banner--- 
     .section-banner {
         width: 100%;
+        padding-top: 70px;
         min-height: 585px;
         background-size: cover;
         // background-repeat: no-repeat;
@@ -653,6 +672,7 @@
     // --footer--//
     .section-head_questions {
         @include intro;
+        padding-top: 40px;
         font-size: 42px;
         text-align: center;
         & h1 {
@@ -814,6 +834,7 @@
     /*==section-page about olha==*/
     
     .section-olha {
+        padding-top: 40px;
         .section-olha_wrap {
             margin: 0 auto;
             display: flex;
