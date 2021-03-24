@@ -116,6 +116,48 @@
   }
 }
 
+/*order adaptive*/
+@media (max-width: 767px) {
+  .section-form .contact-form__title {
+    text-align: center;
+    padding-left: 0;
+    font-size: 20px;
+  }
+  .section-form .contact-form__input-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .section-form .contact-form__input {
+    font-size: 16px;
+    margin: 25px;
+  }
+  .section-form .contact-form__button {
+    margin-top: 10px;
+  }
+  .section-pay {
+    text-align: center;
+    line-height: 50px;
+  }
+  .section-pay_description_head {
+    font-size: 28px;
+    margin: 15px auto;
+  }
+  .section-pay_description_text {
+    font-size: 18px;
+  }
+  .section-pay_description_var {
+    font-size: 18px;
+    margin: 15px auto;
+  }
+  .section-pay_description_rekvisit {
+    font-size: 28px;
+    margin: 15px auto;
+  }
+}
+
+/*order adaptive*/
 @media (max-width: 1200px) {
   .section-header .header {
     -webkit-box-align: center;
@@ -278,30 +320,42 @@
   /*--article_about--*/
   .section-olha .section-olha_wrap {
     max-width: 800px;
-    background: red;
+    background: white;
   }
-  /*--article_about--*/
-  .footer_wrap {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+  .section-olha .section-olha_wrap .section-olha_info {
+    padding-left: 15px;
+    line-height: 25px;
   }
-  .footer_wrap .footer_koord {
-    text-align: center;
+  .section-olha .section-olha_wrap .section-olha_info_list ul {
+    padding-left: 25px;
+    line-height: 25px;
   }
-  .footer_wrap .footer_logo {
-    text-align: center;
-  }
-  .footer_wrap .footer_telephon {
-    padding: 0;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
+}
+
+/*--article_about--*/
+.footer_wrap {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer_wrap .footer_koord {
+  text-align: center;
+}
+
+.footer_wrap .footer_logo {
+  text-align: center;
+}
+
+.footer_wrap .footer_telephon {
+  padding: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /*\adaptive\*/

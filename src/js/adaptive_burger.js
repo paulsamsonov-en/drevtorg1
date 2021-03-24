@@ -8,4 +8,7 @@ $(document).ready(function() {
         $(".header_burger, .nav-menu__burger").toggleClass("active");
         $("body").toggleClass("lock");
     });
+
+
+
 });

@@ -157,7 +157,7 @@ body {
   font-weight: 400;
 }
 
-.nav-menu__info-item-link--active {
+.nav-menu__info-item-link:hover {
   color: #e9b979;
   font-weight: 500;
 }
@@ -369,6 +369,8 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  text-decoration: none;
+  color: #666363;
 }
 
 .banner__btn:hover {
@@ -925,18 +927,20 @@ body {
 }
 
 .quest_wrap_questions {
-  padding-top: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   padding-left: 30px;
   width: 100%;
-  height: 110px;
+  height: auto;
   text-align: left;
   border-bottom: 2px solid gray;
 }
 
 .quest_wrap_answer {
-  padding-top: 30px;
+  padding-top: 20px;
   padding-left: 30px;
-  height: 140px;
+  padding-bottom: 20px;
+  height: auto;
   width: 100%;
   text-align: left;
   border-bottom: 2px solid gray;
@@ -967,6 +971,7 @@ body {
   background: #868585;
 }
 
+/*order*/
 .section-form .contact-form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -991,6 +996,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1064,6 +1071,7 @@ body {
   margin: 40px auto;
 }
 
+/*order*/
 /*--page news--*/
 .section-news_block {
   width: 100%;
@@ -1142,6 +1150,7 @@ body {
   font-weight: 800;
   margin-top: 16px;
   margin-bottom: 16px;
+  line-height: 25px;
 }
 
 .section-olha_citate {
@@ -1150,7 +1159,7 @@ body {
   background: #e9b979;
 }
 
-.section-olha_citate_info_list {
+.section-olha_info_list {
   background: #f1f1f1;
   font-family: 'Gotham Pro', sans-serif;
   list-style: disc outside;
@@ -1167,7 +1176,7 @@ body {
   padding: 10px;
 }
 
-.section-olha_citate_info_list_item {
+.section-olha_info_list_item {
   max-width: 70%;
   margin-bottom: 6px;
 }

@@ -34,7 +34,7 @@
                         <li class="nav-menu__info-item">
                             <a class="nav-menu__info-item-link" href="https://paulsamsonov-en.github.io/drevtorg1/index.html">О нас</a></li>
                         <li class="nav-menu__info-item">
-                            <a class="nav-menu__info-item-link--active" href="https://paulsamsonov-en.github.io/drevtorg1/price-katalog.html">Каталог</a></li>
+                            <a class="nav-menu__info-item-link active" href="https://paulsamsonov-en.github.io/drevtorg1/price-katalog.html">Каталог</a></li>
                         <li class="nav-menu__info-item">
                             <a class="nav-menu__info-item-link" href="https://paulsamsonov-en.github.io/drevtorg1/offers.html">Услуги</a></li>
                         <li class="nav-menu__info-item">
@@ -78,7 +78,7 @@
                         <li class="nav-menu__info-item">
                             <a class="nav-menu__info-item-link" href="https://paulsamsonov-en.github.io/drevtorg1/news.html">Новости</a></li>
                         <li class="nav-menu__info-item ">
-                            <a class="nav-menu__info-item-link--active" href="https://paulsamsonov-en.github.io/drevtorg1/furniture.html">Мебель в доме</a></li>
+                            <a class="nav-menu__info-item-link active" href="https://paulsamsonov-en.github.io/drevtorg1/furniture.html">Мебель в доме</a></li>
                         <li class="nav-menu__info-item">
                             <a class="nav-menu__info-item-link" href="https://paulsamsonov-en.github.io/drevtorg1/delivery.html">Доставка</a></li>
                         <li class="nav-menu__info-item">
@@ -106,8 +106,10 @@
                 <div class="banner__title">
                     <h1>Добродрев</h1>
                 </div>
-                <div class="banner__btn">Подробнее</div>
+                <a href="#">
+                    <div class="banner__btn">Подробнее</div>
             </div>
+            </a>
 
         </div>
     </section>
@@ -435,14 +437,24 @@
     <!--\ footer -->
     <script src="src/slick/slick.min.js" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript" charset="utf-8">
-        $(".center_slider").slick({
-            dots: false,
-            infinite: false,
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            arrows: true
+        if ($(window).width() < 767) {
+            $(".center_slider").slick({
+                dots: false,
+                infinite: false,
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                arrows: false
 
-        });
+            });
+        } else {
+            $(".center_slider").slick({
+                dots: false,
+                infinite: false,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                arrows: true
+            });
+        }
     </script>
 
 
