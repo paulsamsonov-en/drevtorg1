@@ -565,7 +565,8 @@
                 max-width: 660px;
                 max-height: 540px;
                 &_items img {
-                    height: 100%;
+                    width: 100%;
+                    height: auto;
                     max-width: 540px;
                     max-height: 560px;
                     object-fit: contain;
@@ -907,11 +908,15 @@
     /*==/section-page about olha==*/
     
     .section-dev {
-        width: 100%;
+        width: 100vw;
         display: flex;
         justify-content: center;
         &-text {
             text-align: center;
             margin: 20vh;
+        }
+        &-image img {
+            height: auto;
+            width: 100%;
         }
     }

@@ -305,6 +305,9 @@
         -ms-flex-align: center;
             align-items: center;
   }
+  .slaider_wrapper {
+    width: 100vw;
+  }
   .slaider_wrapper .gallery {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;

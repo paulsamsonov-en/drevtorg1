@@ -728,7 +728,8 @@ body {
 }
 
 .slaider_wrapper .gallery .gallery_smoll_items img {
-  height: 100%;
+  width: 100%;
+  height: auto;
   max-width: 540px;
   max-height: 560px;
   -o-object-fit: contain;
@@ -1183,7 +1184,7 @@ body {
 
 /*==/section-page about olha==*/
 .section-dev {
-  width: 100%;
+  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1195,5 +1196,10 @@ body {
 .section-dev-text {
   text-align: center;
   margin: 20vh;
+}
+
+.section-dev-image img {
+  height: auto;
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */

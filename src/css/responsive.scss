@@ -243,6 +243,7 @@
         }
     }
     .slaider_wrapper {
+        width: 100vw;
         .gallery {
             flex-direction: column-reverse;
             &_prew img {
